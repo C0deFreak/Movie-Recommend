@@ -1,14 +1,20 @@
 from django.db import models
 
-# All the details about a single project
-class ProjectDetails(models.Model):
+# All the details about a single movie
+class Movie(models.Model):
 
-    # Unique project name to distinguish from other projects
-    name = models.CharField(max_length=16, default='Project', unique=True)
+    # Unique movie name to distinguish from other movie
+    name = models.CharField(max_length=70, unique=True, default='')
 
-    # Link to the github project page
-    link = models.CharField(max_length=40, default='https://github.com/C0deFreak/Project', unique=True)
+    # Genre of the movie for subcategorization. Possible genres: Action, Comedy, Drama, Fantasy, Horror, Mystery, Romance, Thriller, Western, SCI-FI
+    genre = models.CharField(max_length=7, unique=False, default='')
 
-    # Is the project currently in development
-    worked_on = models.BooleanField(default=False, unique=False)
+    # Appropriate age for this movie
+    age = models.IntegerField(null=False, default=False)
+
+    # A short description of the movie
+    description = models.CharField(max_length=500, unique=True, default='')
+
+    # The overall rating of the movie
+    rating = models.IntegerField(null=False, default=False)
 
