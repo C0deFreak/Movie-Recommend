@@ -14,7 +14,10 @@ DAY 1
     I made the project. The server is established and running
 
 DAY 2
-    I was working on the django model(database) for the movies. Debugging, site does not show input for the fields like age, genre ect.
+    I was working on the django model(database) for the movies. Debugging, site does not show input for the fields like age, genre etc.
 
 DAY 3
     Finally found the bug(views.py, CreateAPIView, not ListAPIView) I added the Avatar movie to the database
+
+DAY 4
+    I intergrated React and Babel into the project to show the start of the apps frontend. I thought of the apps name, "SwipeFlix"
